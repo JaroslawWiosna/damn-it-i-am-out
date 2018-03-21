@@ -55,3 +55,14 @@ Następnie należy wpisać:
 W rezultacie otrzymujemy plik pdf, którego pogląd jest widoczny poniżej.
 
 [![wypowiedzenie.jpg](https://raw.githubusercontent.com/JaroslawWiosna/damn-it-i-am-out-readme/hosting/wypowiedzenie.jpg)](https://raw.githubusercontent.com/JaroslawWiosna/damn-it-i-am-out-readme/hosting/wypowiedzenie.jpg)
+
+### Dlaczego wpisanie **Daty podpisania umowy** jest ważne?
+
+
+| Pracownik jest zatrudniony:                  | Okres wypowiedzenia wynosi: |
+|----------------------------------------------|:---------------------------:|
+| krócej niż 6 miesięcy                        | dwa tygodnie                |
+| dłużej niż 6 miesięcy, ale krócej niż 3 lata | jeden miesiąc               |
+| dłużej niż 3 lata                            | trzy miesiące               |
+
+
