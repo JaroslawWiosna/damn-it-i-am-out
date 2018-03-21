@@ -1,7 +1,27 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-h" ]; then
+    echo "help"
+    exit 0;
+fi
+
 command -v convert > /dev/null 2>&1 || { echo >&2 "Imagemagick nie jest zainstalowany. Kończę działanie programu."; exit 1; }  
 #command -v gpg     > /dev/null 2>&1 || echo >&2 "gpg required.  Aborting."; exit 1;  
+
+configFile="$HOME/.damn-it-i-am-out.conf"
+
+if [ "$1" == "create-conf" ]; then
+    command -v gpg  > /dev/null 2>&1 || { echo >&2 "GNU Privacy Guard nie jest zainstalowany. Kończę działanie programu. "; exit 1; } 
+    echo "create-conf"
+    
+    echo "#stworzono za pomocą skryptu" > $configFile
+    read -p '[Imię:] ' var
+    echo Imię: $var >> $configFile
+    
+    gpg -c --cipher-algo AES256 $configFile
+    rm -f $configFile
+    exit 0;
+fi
 
 blankPage="blankPage.pdf"
 outputPage="wypowiedzenie.pdf"
