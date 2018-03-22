@@ -5,56 +5,61 @@
 
 # damn-it-i-am-out [![Watchers](https://img.shields.io/github/watchers/JaroslawWiosna/damn-it-i-am-out.svg?style=social&label=Watch)](https://github.com/JaroslawWiosna/damn-it-i-am-out/watchers) [![Star](https://img.shields.io/github/stars/JaroslawWiosna/damn-it-i-am-out.svg?style=social&label=Stars)](https://github.com/JaroslawWiosna/damn-it-i-am-out/stargazers) [![Fork](https://img.shields.io/github/forks/JaroslawWiosna/damn-it-i-am-out.svg?style=social&label=Fork)](https://github.com/JaroslawWiosna/damn-it-i-am-out/network)
 
-Wystarczy uzypełnić plik konfiguracyjny `.damn-it-i-am-out.conf`:
-```
-Miasto: 
-Imię:
-Imię narzędnik:
-Nazwisko:
-Nazwisko narzędnik:
-Adres:
-Adres c.d.: 
+Wystarczy wykonać skrypt:
 
-Nazwa pracodawcy:
-Adres pracodawcy:
-Adres pracodawcy c.d.:
-
-Data podpisania umowy:
-Miejsce podpisania umowy:
-
+```sh
+[user@localhost damn-it-i-am-out]$ ./damn-it-i-am-out.sh
 ```
 
-na przykład tak:
+...i wpisywać potrzebne dane:
+
+```sh
+Nie znaleziono pliku konfiguracyjnego
+Proszę podać dane:
+[Miasto:] Warszawa
+[Imię:] Alicja
+[Imię narzędik:] Alicją
+[Nazwisko:] Warszawska
+[Nazwisko narzędnik:] Warszawską
+[Adres:] Piłsudskiego 777/88
+[Adres c.d.:] 00-000 Warszawa
+[Nazwa pracodawcy:] Zła i okrutna firma Sp. z o. o.
+[Adres pracodawcy:] Piłsudskiego 888/99
+[Adres pracodawcy c.d.:] 00-000 Warszawa
+[Data podpisania umowy dd.mm.rrrr:] 21.12.2017
+[Miejsce podpisania umowy:] Warszawa
+Pomyślnie wygenerowano plik wypowiedzenie.pdf
 
 ```
-Miasto: Łódź
-Imię: Jan
-Imię narzędnik: Janem
-Nazwisko: Kowalski
-Nazwisko narzędnik: Kowalskim
-Adres: Piłsudskiego 123 m. 99
-Adres c.d.: 90-111, Łódź
 
-Nazwa pracodawcy: Zła i Okrutna firma Sp. z o. o.
-Adres pracodawcy: Piotrkowska 234 lok. 44
-Adres pracodawcy c.d.: 93-212, Łódź
+#   G  R  A  T  U  L  A  C  J  E  !
 
-Data podpisania umowy: 1.02.2017
-Miejsce podpisania umowy: Łódź
+Oto Twój plik:
 
-```
+[![wypowiedzenie.jpg](https://raw.githubusercontent.com/JaroslawWiosna/damn-it-i-am-out-readme/hosting/wypowiedzenie.jpg)](https://raw.githubusercontent.com/JaroslawWiosna/damn-it-i-am-out-readme/hosting/wypowiedzenie.jpg)
+
+---
+
+### Zanim uruchomisz skrypt
 
 Dobrze jest upewnić się, że **imagemagick** jest zainstalowany.
 
-Następnie należy wpisać:
+### Opcja stworzenia pliku konfiguracyjnego
+
+> Jesteś u kresu sił i chcesz złożyć wypowiedzenie? Chcesz zautomatyzować wygenerowanie wypowiedzenia do granic możliwości?
+
+Skrypt oferuje możliwość stworzenia pliku konfiguracyjnego `~/.damn-it-i-am-out.conf.gpg" 
+Należy uruchomić skrypt z opcją `create-conf`:
 
 ```sh
-./damn-it-i-am-out.sh
+./damn-it-i-am-out.sh create-conf
 ```
 
-W rezultacie otrzymujemy plik pdf, którego pogląd jest widoczny poniżej.
+Po wypełnieniu **formularza** zostanie stworzony zaszyfrowany plik z danymi potrzebnymi do wygenerowania wypowiedzenia.
 
-[![wypowiedzenie.jpg](https://raw.githubusercontent.com/JaroslawWiosna/damn-it-i-am-out-readme/hosting/wypowiedzenie.jpg)](https://raw.githubusercontent.com/JaroslawWiosna/damn-it-i-am-out-readme/hosting/wypowiedzenie.jpg)
+> Aby skorzystać z tej funkcji konieczne jest zainstalowanie **gpg**
+
+---
 
 ### Dlaczego wpisanie **Daty podpisania umowy** jest ważne?
 
@@ -64,5 +69,13 @@ W rezultacie otrzymujemy plik pdf, którego pogląd jest widoczny poniżej.
 | krócej niż 6 miesięcy                        | dwa tygodnie                |
 | dłużej niż 6 miesięcy, ale krócej niż 3 lata | jeden miesiąc               |
 | dłużej niż 3 lata                            | trzy miesiące               |
+
+---
+
+### U W A G A !
+
+**Niniejszy projekt jest żartem.**
+
+Inspiracją jest [ta strona](https://github.com/NARKOZ/hacker-scripts), ktora opisuje skrypty napisane przez człowieka ceniącego swój czas. Zgodnie z jego filozofią **wszystko co zajmuje więcej niż 90 sekund twojego czasu powinno być zautomatyzowane**. Pomyślałem, że szukanie wzoru wypowiedzenia zajmuje więcej niż półtorej minuty.
 
 
