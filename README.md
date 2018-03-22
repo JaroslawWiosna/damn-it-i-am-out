@@ -11,7 +11,7 @@ Wystarczy wykonać skrypt:
 [user@localhost damn-it-i-am-out]$ ./damn-it-i-am-out.sh
 ```
 
-...i wpisywać potrzebne dane:
+...i wpisać potrzebne dane:
 
 ```sh
 Nie znaleziono pliku konfiguracyjnego
@@ -48,7 +48,7 @@ Dobrze jest upewnić się, że **imagemagick** jest zainstalowany.
 
 > Jesteś u kresu sił i chcesz złożyć wypowiedzenie? Chcesz zautomatyzować wygenerowanie wypowiedzenia do granic możliwości?
 
-Skrypt oferuje możliwość stworzenia pliku konfiguracyjnego `~/.damn-it-i-am-out.conf.gpg" 
+Skrypt oferuje możliwość stworzenia pliku konfiguracyjnego `~/.damn-it-i-am-out.conf.gpg` 
 Należy uruchomić skrypt z opcją `create-conf`:
 
 ```sh
