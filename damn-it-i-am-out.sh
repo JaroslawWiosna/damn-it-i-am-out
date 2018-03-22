@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$1" == "-h" ]; then
-    echo "damn-it-i-am-out v1.0"
+    echo "damn-it-i-am-out v2.0"
     echo "create-conf - aby stworzyć plik konfiguracyjny"
     echo "remove-conf - aby skasować plik konfiguracyjny"
     exit 0;
