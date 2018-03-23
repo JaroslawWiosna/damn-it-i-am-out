@@ -24,7 +24,7 @@ if [ "$1" == "create-conf" ]; then
     
     echo "#stworzono za pomocą skryptu" > $configFile
     read -p 'Miasto: ' var
-    echo : $var >> $configFile
+    echo Miasto: $var >> $configFile
     read -p 'Imię: ' var
     echo Imię: $var >> $configFile
     read -p 'Imię narzędnik: ' var
